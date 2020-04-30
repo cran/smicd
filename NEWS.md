@@ -1,3 +1,8 @@
+# smicd 1.1.0
+
+* Added new convergence plots for objects of class `kdeAlgo` and `sem`
+* Updated reference in package description
+
 # smicd 1.0.3
 
 * Bugfix in function `kdeAlgo` and `standardError.est`
