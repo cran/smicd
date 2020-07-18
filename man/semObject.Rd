@@ -6,8 +6,8 @@
 \value{
 An object of class "sem" is a list containing the following components. Some
 parameters are only estimated for liner mixed regression models (and vice versa).
-\item{\code{pseudo.y}}{a matrix containing the pseudo samples of the interval
-censored variable from each iteration step}
+\item{\code{pseudo.y}}{a matrix containing the pseudo samples of the
+interval-censored variable from each iteration step}
 \item{\code{coef}}{the estimated regression coefficients (fixed effects)}
 \item{\code{ranef}}{the estimated regression random effects}
 \item{\code{sigmae}}{estimated variance  \eqn{\sigma_e}}
@@ -43,7 +43,7 @@ estimate lambda}
 \item{\code{samples}}{the number of additional iterations of the SEM-algorithm}
 \item{\code{classes}}{specified intervals}
 \item{\code{original.y}}{the dependent variable of the regression model measured on
-an interval censored scale}
+an interval-censored scale}
 \item{\code{call}}{the function call}
 }
 \description{
@@ -53,9 +53,9 @@ parameters and standard errors.
 \code{\link{print}}, \code{\link{plot}}  and \code{\link{summary}}.
 }
 \references{
-Walter, P., Gross, M., Schmid, T. and Tzavidis, N. (2017). Estimation of Linear and Non-Linear Indicators
-using Interval Censored Income Data. School of Business & Economics, Discussion
-Paper.
+Walter, P. (2019). A Selection of Statistical Methods for Interval-Censored
+Data with Applications to the German Microcensus, PhD thesis,
+Freie Universitaet Berlin
 }
 \seealso{
 \code{\link{smicd}},  \code{\link[stats]{lm}}, \code{\link[lme4]{lmer}},

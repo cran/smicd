@@ -2,7 +2,7 @@
 % Please edit documentation in R/sem.lme.R
 \name{semLme}
 \alias{semLme}
-\title{Linear Mixed Regression with Interval Censored Dependent Variable}
+\title{Linear Mixed Regression with Interval-Censored Dependent Variable}
 \usage{
 semLme(
   formula,
@@ -21,10 +21,11 @@ semLme(
 and random-effects part of the model, with the response on the left of a ~ operator
 and the terms, separated by + operators, on the right. Random-effects terms are
 distinguished by vertical bars (|) separating expressions for design matrices from
-grouping factors, as in \code{\link[lme4]{lmer}}. Note: Only random intercept
-and random slope models are implemented at that point (e.g. \code{y ~ x + (1|
+grouping factors, as in \code{\link[lme4]{lmer}}. Note: Only models with a
+maximum of one random intercept
+and one random slope are implemented at this point (e.g. \code{y ~ x + (1|
 ID)}, or \code{y ~ x + (x|ID)}). The
-dependent variable is measuread as interval censored values; factor with
+dependent variable is measured as interval-censored values; factor with
 ordered factor values}
 
 \item{data}{a data frame containing the variables of the model}
@@ -59,7 +60,7 @@ are estimated}
 }
 \value{
 An object of class "sem" that provides parameter estimated for linear
-regression models with interval censored dependent variable. Generic
+regression models with interval-censored dependent variable. Generic
 functions such as, \code{\link{print}},
 \code{\link{plot}}, and \code{\link{summary}} have methods that can be used
 to obtain further information. See \code{\link{semObject}} for descriptions
@@ -69,46 +70,49 @@ of objects of class "sem".
 \description{
 This function estimates the linear mixed regression model when
 the dependent
-variable is interval censored. The estimation of the standard errors is
+variable is interval-censored. The estimation of the standard errors is
 fasciliated by a parametric bootstrap.
 }
 \details{
 The model parameters are estimated using pseudo samples of the
-interval censored dependent variable. The object \code{pseudo.y} returns the
+interval-censored dependent variable. The object \code{pseudo.y} returns the
 pseudo samples of each iteration step of the SEM-algorithm.
 }
 \examples{
 \dontrun{
 # Load and prepare data
 data <- Exam
-classes <- c(1,1.5,2.5,3.5,4.5,5.5,6.5,7.7,8.5, Inf)
-data$examsc.class<- cut(data$examsc, classes)
+classes <- c(1, 1.5, 2.5, 3.5, 4.5, 5.5, 6.5, 7.7, 8.5, Inf)
+data$examsc.class <- cut(data$examsc, classes)
 
 # Run model with random intercept and default settings
-model1 <- semLme(formula = examsc.class ~ standLRT + schavg + (1|school),
-data = data, classes = classes)
+model1 <- semLme(
+  formula = examsc.class ~ standLRT + schavg + (1 | school),
+  data = data, classes = classes
+)
 summary(model1)
 
-# Run model with random intercept + random slope with default settings
-model2 <- semLme(formula = examsc.class ~ standLRT + schavg +
-(standLRT|school), data = data, classes = classes)
-summary(model2)
-}\dontshow{
+}
+\dontshow{
 # Load and prepare data
 data <- Exam
-classes <- c(1,1.5,2.5,3.5,4.5,5.5,6.5,7.7,8.5, Inf)
-data$examsc.class<- cut(data$examsc, classes)
+classes <- c(1, 1.5, 2.5, 3.5, 4.5, 5.5, 6.5, 7.7, 8.5, Inf)
+data$examsc.class <- cut(data$examsc, classes)
 
-#Run model with random intercept and default settings
-model1 <- semLme(formula = examsc.class ~ standLRT + schavg + (1|school),
-data = data, classes = classes, burnin = 4, samples = 10)
-summary(model1)}
+# Run model with random intercept and default settings
+model1 <- semLme(
+  formula = examsc.class ~ standLRT + schavg + (1 | school),
+  data = data, classes = classes, burnin = 4, samples = 10
+)
+summary(model1)
+
+}
+
 }
 \references{
-Walter, P., Gross, M., Schmid, T. and Tzavidis, N. (2017). Estimation of
-Linear and Non-Linear Indicators
-using Interval Censored Income Data. FU-Berlin School of Business & Economics,
-Discussion Paper.
+Walter, P. (2019). A Selection of Statistical Methods for Interval-Censored
+Data with Applications to the German Microcensus, PhD thesis,
+Freie Universitaet Berlin
 }
 \seealso{
 \code{\link[lme4]{lmer}}, \code{\link{print.sem}},
