@@ -1,6 +1,6 @@
-c8d9daca308dac8236b2be0ec24b819d *DESCRIPTION
+05f4c942cdfe237860b8780efcaa4942 *DESCRIPTION
 23eb82b3ec0b758b77c82d4f3eed9935 *NAMESPACE
-a3cb123f91ff2138ec1aafc36c9da5db *NEWS.md
+2abb032c349228f1113d63cf24641e81 *NEWS.md
 e9ef31eca798898aa313404243991bb1 *R/Exam.R
 f32d1a2a14cab9290b92bca975529a4b *R/ICD.R
 3bf3febec078e2d032330d64765f4020 *R/boxcox.lm.est.R
@@ -16,8 +16,8 @@ e19f9fef2a00d9426333456a39879a9a *R/kdeAlgoObject.R
 43a010028f936718e9ffe72ebb9ec726 *R/midpoints.est.R
 2bec5e2a7739cb8da69d16c6c458713d *R/parameters.est.R
 91a9fac4325cd8453d1fc1859f066a5c *R/parameters.est.ma.R
-33cbeb3eba9b6ef697e809cfc3989c4f *R/plot.kdeAlgo.R
-def226fdfbba170101a692c45fecfa6d *R/plot.sem.R
+fa5b973c14527514277cfa1df8cf79a6 *R/plot.kdeAlgo.R
+0e699e9b1448c149f12c9665056277c2 *R/plot.sem.R
 c29dcd200cf002fa51bffcd7c9592235 *R/print.kdeAlgo.R
 715ec2dbd08c4a91fa976d7b6d409ca7 *R/print.sem.R
 7d394f93dfde4abdc0593e3888b7d01e *R/sem.lm.R
@@ -29,7 +29,7 @@ b4d0b4cdd835ccabdac1db9f3eeba8fa *R/standardErrorLME.est.R
 bab644328d67a78ac37e675a3fdee594 *R/summary.sem.R
 c43af921e4db443aad931703b9c8909a *build/vignette.rds
 fa56eda02fbed32c6c2fcb6f2568587d *data/Exam.RData
-355f5d8fdcbbd4084b491c19b8068388 *inst/doc/vignetteSmicd.pdf
+cc1d7a8aae3ef55093effbf85035fc52 *inst/doc/vignetteSmicd.pdf
 887c57b676a0cbb03b60aee5449f9fca *inst/doc/vignetteSmicd.pdf.asis
 b7f799587ce147338c6aef5cba76b997 *man/Exam.Rd
 b4c941df08f0da63bf7f67a63a5d2634 *man/kdeAlgo.Rd
