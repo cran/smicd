@@ -1,6 +1,6 @@
-77fd35f646e5ef2bc6d251ebcbbd071e *DESCRIPTION
+60e739196dacd0997711a1d4d7f3009e *DESCRIPTION
 d236872aeef9d1b791fb596db26b8d9e *NAMESPACE
-92a5639cdccd1bf92d9009e9586e6231 *NEWS.md
+052ad67dd07bc8ba42f1639eca984eeb *NEWS.md
 e9ef31eca798898aa313404243991bb1 *R/Exam.R
 f32d1a2a14cab9290b92bca975529a4b *R/ICD.R
 3bf3febec078e2d032330d64765f4020 *R/boxcox.lm.est.R
@@ -29,7 +29,7 @@ b4d0b4cdd835ccabdac1db9f3eeba8fa *R/standardErrorLME.est.R
 542f7cf0c70e72c6d7d609ccb009eba0 *R/summary.sem.R
 e0ca90a880b0a52194bc77b70c401fab *build/vignette.rds
 fa56eda02fbed32c6c2fcb6f2568587d *data/Exam.RData
-00259f729ad25250a37d7de201173516 *inst/doc/vignetteSmicd.pdf
+2baa9b51b47e677a38ca4fee5ccef975 *inst/doc/vignetteSmicd.pdf
 887c57b676a0cbb03b60aee5449f9fca *inst/doc/vignetteSmicd.pdf.asis
 b7f799587ce147338c6aef5cba76b997 *man/Exam.Rd
 b4c941df08f0da63bf7f67a63a5d2634 *man/kdeAlgo.Rd
